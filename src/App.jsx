@@ -2,7 +2,7 @@ import { useState } from 'react'
 import List from './Components/List'
 
 function App() {
-  const [inp,setInp] = useState([{id:1,category:"books",item:"Naked man"}])
+  const [inp,setInp] = useState([])
   const getItems = (items, category)=>setInp(prevInp=>[...prevInp,...items.split(",").map((item,index)=>{return {id:index+inp.length,item,category}})])
   return (
     <>
